@@ -3,7 +3,9 @@ package day06_JUnitFramework;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.Assert;
 import org.junit.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
@@ -38,18 +40,51 @@ public class C05_Assertions {
         String actualUrl= driver.getCurrentUrl(); // https://www.bestbuy.com/
         Assert.assertEquals(expectedUrl,actualUrl);
 
+        driver.close();
+
     }
 
     @Test
-    public void test2(){
-
-        // ○ titleTest => Sayfa başlığının “Rest” içermediğini(contains) test edin
+    public void test02(){
 
         mahserin4Atlisi();
 
+        // ○ titleTest => Sayfa başlığının “Rest” içermediğini(contains) test edin
+
         String expectedIcerik= "Rest";
-        String actualTitle=driver.getTitle();
+        String actualTitle=driver.getTitle();  // Best Buy International: Select your Country - Best Buy
+
 
         Assert.assertFalse(actualTitle.contains(expectedIcerik));
+        driver.close();
+    }
+
+    @Test
+    public void test03(){
+
+        mahserin4Atlisi();
+
+        // ○ logoTest => BestBuy logosunun görüntülendigini test edin
+
+        WebElement logoElementi = driver.findElement(By.xpath("/html/body/div[2]/div/div/div/div[1]/img"));
+        logoElementi.isDisplayed();
+
+        Assert.assertTrue(logoElementi.isDisplayed());
+        driver.close();
+    }
+
+    @Test
+    public void test04(){
+
+        mahserin4Atlisi();
+
+        // ○ FrancaisLinkTest => Fransizca Linkin görüntülendiğini test edin
+
+        WebElement fransizcaLinkElementi = driver.findElement(By.xpath("/html/body/div[1]/ul/li[2]/button"));
+
+        Assert.assertTrue(fransizcaLinkElementi.isDisplayed());
+        driver.close();
+
+
     }
 }
