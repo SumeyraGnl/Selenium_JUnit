@@ -10,6 +10,14 @@ import utilities.TestBase;
 
 public class C03_FakerClass extends TestBase {
 
+    /*
+        Faker kutuphanesi
+        feyk degerler olusturabilecegimiz bir kutuphanedir
+
+        buradan deger uretebilmek icin
+        faker class'indan bir obje olusturmaliyiz
+     */
+
     @Test
     public void test01() throws InterruptedException {
 

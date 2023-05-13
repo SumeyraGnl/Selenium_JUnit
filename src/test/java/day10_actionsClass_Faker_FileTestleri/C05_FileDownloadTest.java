@@ -26,10 +26,20 @@ public class C05_FileDownloadTest extends TestBase {
 
         // 4. Dosyanın başarıyla indirilip indirilmediğini test edelim
 
-        // Dosyayı download
+        // Dosyayi Downloads klasorune indirecek
 
         String dosyaYolu= "/Users/sumeyragunel/Downloads";
 
         Assert.assertTrue(Files.exists(Paths.get("/Users/sumeyragunel/Downloads")));
+
+        // herkesin bilgisayarinda farkli bir dosya hiyerarsisi oldugundan
+        // herkesin dosya yolu birbirinden farkli olur
+        // Dosya yolunu dinamik hale getirmek icin Java'dan yardim alacagiz
+        //C:\Users\emre.cigit\Downloads\foto.png"
+        //"C:\Users\Berke\Downloads\foto.png"
+
+        System.out.println(System.getProperty("user.dir"));
+        System.out.println(System.getProperty("user.home"));
+
     }
 }

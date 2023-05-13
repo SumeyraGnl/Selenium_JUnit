@@ -11,8 +11,16 @@ public class C06_DosyaYoluDinamikYapma {
     @Test
     public void test01(){
 
+        // herkesin bilgisayarinda farkli bir dosya hiyerarsisi oldugundan
+        // herkesin dosya yolu birbirinden farkli olur
+        // Dosya yolunu dinamik hale getirmek icin Java'dan yardim alacagiz
+        //  /Users/ahmetbulutluoz/Downloads/foto.png
+        //C:\Users\emre.cigit\Downloads\foto.png"
+        //"C:\Users\Berke\Downloads\foto.png"
+
 
         System.out.println(System.getProperty("user.dir")); // /Users/sumeyragunel/IdeaProjects/com.Team113JUnit
+        // projenin dosya yolunu verir
 
         System.out.println(System.getProperty("user.home")); // /Users/sumeyragunel
 
