@@ -27,6 +27,14 @@ public class C01_SeleniumWaits {
         max sure icerisinde gorev tamamlanmazsa
         exeption verip calısmayi durdurur.
 
+        Testlerin buyuk cogunlugunda
+        implicitly wait suresi
+        senkronizasyonu saglamak icin yeterli olur
+        ANCAK
+        ozel bir gorev icin implicitly wait'de tanimlanan
+        max. bekleme suresinden daha fazla beklememiz gerekirse
+        O GOREVE OZGU, TEK SEFERLIK bir wait olusturabiliriz
+
      */
 
     // 2. Iki tane metod olusturun : implicitWait() , explicitWait()
@@ -106,7 +114,8 @@ public class C01_SeleniumWaits {
          */
 
         WebDriverWait wait =new WebDriverWait(driver,Duration.ofSeconds(40));
-        WebElement itsGoneElementi=wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[text()=\"It's gone!\"]")));
+        WebElement itsGoneElementi=
+                wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[text()=\"It's gone!\"]")));
         Assert.assertTrue(itsGoneElementi.isDisplayed());
 
         //6. Add buttonuna basin

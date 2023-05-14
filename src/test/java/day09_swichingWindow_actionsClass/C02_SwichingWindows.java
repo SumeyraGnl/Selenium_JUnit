@@ -51,7 +51,7 @@ public class C02_SwichingWindows extends TestBase {
         // ● Click Here butonuna basın.
 
         driver.findElement(By.xpath("//*[text() = 'Click Here']")).click();
-        // 51. satir itibariyle yeni window acildi
+        // 53. satir itibariyle yeni window acildi
         // artik 2 window var
 
         Set<String> whDegerleriSet = driver.getWindowHandles();
@@ -63,10 +63,11 @@ public class C02_SwichingWindows extends TestBase {
                 ikinciWindowWHD = eachWhd;
             }
         }
-                // Artik acilan 2.window'un windowHandleDegerine sahibiz
+        // Artik acilan 2.window'un windowHandleDegerine sahibiz
 
                 // ● Acilan yeni pencerenin sayfa başlığının (title) “New Window” oldugunu dogrulayin.
 
+        //Once yeni acilan pencereye gitmemiz lazim.
                 driver.switchTo().window(ikinciWindowWHD);
                 expectedTitle = "New Window";
                 actualTitle = driver.getTitle();
@@ -85,6 +86,8 @@ public class C02_SwichingWindows extends TestBase {
                 driver.switchTo().window(ilkSayfaWHD);
                 expectedTitle = "The Internet";
                 actualTitle = driver.getTitle();
+
                 Assert.assertEquals(expectedTitle, actualTitle);
+                Thread.sleep(2000);
             }
         }

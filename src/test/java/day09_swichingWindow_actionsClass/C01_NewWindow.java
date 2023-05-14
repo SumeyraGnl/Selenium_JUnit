@@ -19,8 +19,6 @@ public class C01_NewWindow extends TestBase {
 
      */
 
-
-
     @Test
     public void test01() throws InterruptedException {
 
