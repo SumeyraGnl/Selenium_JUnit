@@ -26,7 +26,7 @@ public class C02_KlavyeActions extends TestBase {
         WebElement isimKutusu=driver.findElement(By.xpath("//*[@name='firstname']"));
 
         actions.click(isimKutusu)
-                .sendKeys("Ali")
+                .sendKeys("Ayse")
                 .sendKeys(Keys.TAB)
                 .sendKeys("Karahan")
                 .sendKeys(Keys.TAB)
@@ -45,6 +45,7 @@ public class C02_KlavyeActions extends TestBase {
                 .sendKeys(Keys.TAB)
                 .sendKeys(Keys.TAB)
                 .sendKeys(Keys.ARROW_RIGHT)
+                .sendKeys(Keys.ARROW_LEFT)
                 .sendKeys(Keys.TAB)
                 .sendKeys(Keys.TAB)
                 .sendKeys(Keys.TAB)

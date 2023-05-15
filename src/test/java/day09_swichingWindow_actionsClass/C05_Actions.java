@@ -12,7 +12,9 @@ public class C05_Actions extends TestBase {
    @Test
     public void test01() {
         //1- https://www.amazon.com/ adresine gidin
+
         driver.get("https://www.amazon.com/");
+
         //2- Sag ust bolumde bulunan “Account & Lists” menusunun acilmasi icin
         //   mouse’u bu menunun ustune getirin
 

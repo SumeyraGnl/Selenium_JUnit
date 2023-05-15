@@ -33,7 +33,8 @@ public class C08_Waits {
 
         //5. “It’s gone!” mesajinin goruntulendigini dogrulayin.
 
-        WebElement itsGoneElementi=driver.findElement(By.xpath("//p[text()='It’s gone!']"));
+        WebElement itsGoneElementi= driver.findElement(By.xpath("//p[text()=\"It's gone!\"]"));
+
         Assert.assertTrue(itsGoneElementi.isDisplayed());
 
         //6. Add buttonuna basin
