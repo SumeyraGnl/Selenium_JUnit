@@ -18,22 +18,21 @@ public class C02_WebTables extends TestBase {
 
         //  2. Headers da bulunan basliklari yazdirin
 
-        List<WebElement> basliklarList=driver.findElements(By.xpath("/div[@role='columnheader']"));
-
-        for (WebElement eachHeader:basliklarList
-             ) {
+        List<WebElement> basliklarList = driver.findElements(By.xpath("//div[@role='columnheader']"));
+        for (WebElement eachHeader: basliklarList
+        ) {
             System.out.println(eachHeader.getText());
         }
 
         //  3. 3.sutunun basligini yazdirin
 
-        System.out.println("3.sutun basligi: " +basliklarList.get(3).getText());
+        System.out.println("3.sutun basligi : " + basliklarList.get(3).getText());
 
         //  4. Tablodaki tum datalari yazdirin
 
         System.out.println("=========================");
 
-        List<WebElement> tabloDatalari=driver.findElements(By.xpath("//div[@role=‘gridcell’]"));
+        List<WebElement> tabloDatalari=driver.findElements(By.xpath("//div[@role='gridcell']"));
 
         int bosOlmayanDataSayisi=0;
         for (WebElement eachData:tabloDatalari
@@ -77,7 +76,6 @@ public class C02_WebTables extends TestBase {
                 System.out.println("Kierra'nin maaasi : " + salary.getText());
             }
         }
-
 
         //10. bir method olusturun,
         //    satir ve sutun sayisini girdigimde bana datayi yazdirsin
