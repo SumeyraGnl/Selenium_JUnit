@@ -26,7 +26,7 @@ public class C03_ReadExcel {
         Row row= sheet.getRow(1); // index 0'dan basliyor
         Cell cell=row.getCell(3); // index 0'dan basliyor
 
-        System.out.println(cell);
+        System.out.println(cell);  // Kabil
 
         // 5.index'deki satirin, 1.index'indeki datanin "Luanda" oldugunu test edin
 

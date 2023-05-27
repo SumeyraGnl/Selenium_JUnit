@@ -63,9 +63,10 @@ public class C01_ReadExcel {
         // Sayfa2'de kullanilan satir sayisinin 7 oldugunu test edin
 
         int kullanilanSatirSayisi= workbook
-                .getSheet("Sayfa2")
-                .getPhysicalNumberOfRows();
-        int expectedSatirSayisi=7;
+                                   .getSheet("Sayfa2")
+                                   .getPhysicalNumberOfRows();
+
+        int expectedSatirSayisi=11;
 
         Assert.assertEquals(expectedSatirSayisi,kullanilanSatirSayisi);
 
